@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ErgoFlow - La Mochila del Futuro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">ErgoFlow</div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#pricing">Precios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-sun"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <canvas class="hero-bg" id="hero-canvas"></canvas>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="floating">ErgoFlow</h1>
+                <p class="hero-subtitle">La mochila inteligente que revoluciona tu día a día</p>
+                <a href="#pricing" class="cta-button">Obtener Ahora - S/ 299</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="./img/ergoflow-backpack.svg" alt="Mochila ErgoFlow" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Características Revolucionarias</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Carga Inteligente</h3>
+                    <p>Power bank de 20,000mAh integrado con carga inalámbrica Qi y puertos USB-C/USB-A. Nunca más te quedarás sin batería.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Sistema Modular</h3>
+                    <p>Compartimentos extraíbles y reconfigurables que se adaptan a tus necesidades. Organización personalizada al máximo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Diseño Ergonómico</h3>
+                    <p>Espaldares acolchados con ventilación avanzada y distribución óptima del peso. Tu espalda te lo agradecerá.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Tecnología LED</h3>
+                    <p>Luz LED interna con sensor de movimiento para encontrar tus objetos en la oscuridad. Siempre iluminado cuando lo necesites.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Seguridad Anti-Robo</h3>
+                    <p>Bolsillo secreto pegado a la espalda y materiales resistentes a cortes. Máxima protección para tus valuables.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💧</div>
+                    <h3>Resistente al Agua</h3>
+                    <p>Materiales impermeables y base reforzada. Protege tu tecnología en cualquier clima.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="carousel-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Explora ErgoFlow</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide active" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+                    <div class="carousel-overlay">
+                        <h3>Vista Frontal</h3>
+                        <p>Diseño elegante y moderno con puerto USB externo para carga rápida sin abrir la mochila.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background: linear-gradient(45deg, #f093fb, #f5576c);">
+                    <div class="carousel-overlay">
+                        <h3>Compartimentos Internos</h3>
+                        <p>Sistema modular con compartimentos específicos para laptop, tablet, cables y más.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background: linear-gradient(45deg, #4facfe, #00f2fe);">
+                    <div class="carousel-overlay">
+                        <h3>Sistema de Carga</h3>
+                        <p>Power bank extraíble de 20,000mAh con zonas de carga inalámbrica integradas.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background: linear-gradient(45deg, #43e97b, #38f9d7);">
+                    <div class="carousel-overlay">
+                        <h3>Diseño Ergonómico</h3>
+                        <p>Tirantes acolchados con ventilación y distribución perfecta del peso.</p>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" onclick="prevSlide()">‹</button>
+                <button class="carousel-nav carousel-next" onclick="nextSlide()">›</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Planes de Inversión</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>ErgoFlow Básico</h3>
+                    <div class="price">S/ 199</div>
+                    <div class="price-subtitle">Precio de Lanzamiento</div>
+                    <ul class="features-list">
+                        <li>Power bank 10,000mAh</li>
+                        <li>Compartimentos básicos</li>
+                        <li>Diseño ergonómico</li>
+                        <li>Resistente al agua</li>
+                        <li>Garantía 1 año</li>
+                    </ul>
+                    <a href="#" class="cta-button" style="background: linear-gradient(45deg, #888, #aaa);">Pre-Orden</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>ErgoFlow Pro</h3>
+                    <div class="price">S/ 299</div>
+                    <div class="price-subtitle">Más Popular - 40% Descuento</div>
+                    <ul class="features-list">
+                        <li>Power bank 20,000mAh</li>
+                        <li>Carga inalámbrica Qi</li>
+                        <li>Sistema modular completo</li>
+                        <li>LED con sensor</li>
+                        <li>Bolsillo anti-robo</li>
+                        <li>Garantía 2 años</li>
+                    </ul>
+                    <a href="#" class="cta-button">Comprar Ahora</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>ErgoFlow Elite</h3>
+                    <div class="price">S/ 399</div>
+                    <div class="price-subtitle">Edición Limitada</div>
+                    <ul class="features-list">
+                        <li>Todo lo de Pro +</li>
+                        <li>Carga rápida 65W</li>
+                        <li>Materiales premium</li>
+                        <li>App móvil incluida</li>
+                        <li>Soporte personalizado</li>
+                        <li>Garantía 3 años</li>
+                    </ul>
+                    <a href="#" class="cta-button" style="background: linear-gradient(45deg, #ffd700, #ffed4e);">Exclusivo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#">📧</a>
+                <a href="#">📱</a>
+                <a href="#">📍</a>
+            </div>
+            <p>&copy; 2025 ErgoFlow Perú. La revolución de las mochilas inteligentes.</p>
+            <p>Contacto: info@ergoflow.pe | +51 1 234-5678 | Lima, Perú</p>
+        </div>
+    </footer>
+    <script src="./js/app.js"> </script>
+</body>
+</html>
