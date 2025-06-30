@@ -278,6 +278,25 @@ nav.scrolled {
     position: relative;
 }
 
+/* Estilos para la caja imageMochila */
+.imageMochila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilos para las imágenes dentro de imageMochila */
+.imageMochila img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
 .carousel-slide.active {
     display: block;
 }
